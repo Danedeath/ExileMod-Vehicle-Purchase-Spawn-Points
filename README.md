@@ -10,7 +10,7 @@ Goal of script is to allow the following options:
 * Ships still spawn in the water and ignore the usage of spawn points
 
 # Note
-The objects on the map must not be simple objects in order for nearestObjects to detect the items listed int he _spawnObjects array
+The objects on the map must not be simple objects in order for nearestObjects to detect the items listed in the _spawnObjects array
 
 # Installation
 Add ExileServer_system_trading_network_purchaseVehicleRequest.sqf to your mission overwrites folder and then add it to the `CfgExileCustomCode` class as required. 
