@@ -1,4 +1,4 @@
-# ExileMod-Vehicle-spawn-points
+# ExileMod-Vehicle-Purchase-Spawn-Points
 
 Script will provide the functionality of using specified objects to spawn vehicles with. If all positions available are full, a notification will be sent to the player.
 Script utilizes extdb3 instead of extdb2, modify accordingly to extdb2.
