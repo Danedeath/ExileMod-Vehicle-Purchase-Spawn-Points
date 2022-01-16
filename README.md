@@ -9,8 +9,7 @@ Goal of script is to allow the following options:
 * Use a specified search radius, and a 'safe radius' around a spawn point
 
 # Installation
-Add ExileServer_system_trading_network_purchaseVehicleRequest.sqf to your mission overwrites folder and then add it to the `CfgExileCustomCode` class as required.
+Add ExileServer_system_trading_network_purchaseVehicleRequest.sqf to your mission overwrites folder and then add it to the `CfgExileCustomCode` class as required. IE:
 
-    IE:
     
-    ``ExileServer_system_trading_network_purchaseVehicleRequest = "overwrites\extdb3\ExileServer_system_trading_network_purchaseVehicleRequest.sqf";``
+    ExileServer_system_trading_network_purchaseVehicleRequest = "overwrites\extdb3\ExileServer_system_trading_network_purchaseVehicleRequest.sqf";
