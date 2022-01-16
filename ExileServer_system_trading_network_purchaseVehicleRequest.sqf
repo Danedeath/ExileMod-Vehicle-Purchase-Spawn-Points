@@ -82,8 +82,8 @@ try
 		// (toast)message to player when there is no room to spawn at any of the available locations
 		_errorMessage   = "There is no room to safely spawn this vehicle, ask a player to move their vehicle!"; 
 
-		// remove the VR circle if vehicle type is 'Air'
-		if (_vehicleClass isKindOf "Air") then { _spawnObjects deleteAt 0; };
+		// If you want to ignore a specific spawn object then add something like this for a specific vehicle type
+		// if (_vehicleClass isKindOf "Air") then { _spawnObjects deleteAt 0; };
 
 		_nObjects        = nearestObjects  [_playerObject, _spawnObjects, _searchRadius];
 		_lenSpawnObjects = count _nObjects;
