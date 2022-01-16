@@ -7,7 +7,8 @@ Goal of script is to allow the following options:
 * Allow for vehicles to spawn on designated points, via an object located on the map
 * Still spawn vehicles (using the default Exile spawner), if no spawn point is detected
 * Use a specified search radius, and a 'safe radius' around a spawn point
-
+* Ships still spawn in the water and ignore the usage of spawn points
+* 
 # Installation
 Add ExileServer_system_trading_network_purchaseVehicleRequest.sqf to your mission overwrites folder and then add it to the `CfgExileCustomCode` class as required. IE:
 
