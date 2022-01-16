@@ -73,11 +73,11 @@ try
 			"Land_JumpTarget_F"
 		]; 		
 
-		_safeRadius     = 5; 							// radius around the spawn object where it looks for room, must be 5 or higher
-		_disableRadius  = 0; 							// set to 1 if you want vehicles to only spawn at the exact coords of your spawn object, not recommended better to reduce _safeRadius
-		_dirAir         = 30.180;       				// set rotation of air vehicle spawning, default = random
-		_dirOther       = (random 360); 				// set rotation of all other vehicles spawning, default = random
-		_searchRadius	= 110;							// set the radius to search for _spawnObjects based on the players current location
+		_safeRadius     = 5;                   // radius around the spawn object where it looks for room, must be 5 or higher
+		_disableRadius  = 0;                   // set to 1 if you want vehicles to only spawn at the exact coords of your spawn object, not recommended better to reduce _safeRadius
+		_dirAir         = 30.180;              // set rotation of air vehicle spawning, default = random
+		_dirOther       = (random 360);        // set rotation of all other vehicles spawning, default = random
+		_searchRadius	= 110;                 // set the radius to search for _spawnObjects based on the players current location
 		
 		// (toast)message to player when there is no room to spawn at any of the available locations
 		_errorMessage   = "There is no room to safely spawn this vehicle, ask a player to move their vehicle!"; 
