@@ -10,7 +10,9 @@ Goal of script is to allow the following options:
 * Ships still spawn in the water and ignore the usage of spawn points
 
 # Installation
-Add ExileServer_system_trading_network_purchaseVehicleRequest.sqf to your mission overwrites folder and then add it to the `CfgExileCustomCode` class as required. IE:
+Add ExileServer_system_trading_network_purchaseVehicleRequest.sqf to your mission overwrites folder and then add it to the `CfgExileCustomCode` class as required. 
+
+IE:
 
     
     ExileServer_system_trading_network_purchaseVehicleRequest = "overwrites\extdb3\ExileServer_system_trading_network_purchaseVehicleRequest.sqf";
