@@ -85,8 +85,17 @@ try
 
 		// If you want to ignore a specific spawn object then add something like this for a specific vehicle type
 		// if (_vehicleClass isKindOf "Air") then { _spawnObjects deleteAt 0; };
+		
+		// find a type of nearest object from the list of objects available...
+		{
+			_objects = 
+			if ((count _objects) >= 1) then {
 
-		_nObjects        = nearestObjects  [_playerObject, _spawnObjects, _searchRadius];
+				_nObjects append _objects;
+
+			};
+		} forEach _spawnObjects;
+		
 		_lenSpawnObjects = count _nObjects;
 
 		//diag_log format ["[VehPurch] Request for vehicle %1, found %2 locations.", _vehicleClass, str (count _nObjects)];
