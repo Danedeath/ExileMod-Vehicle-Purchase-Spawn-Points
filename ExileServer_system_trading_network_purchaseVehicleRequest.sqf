@@ -88,7 +88,7 @@ try
 		
 		// find a type of nearest object from the list of objects available...
 		{
-			_objects = 
+			_objects = nearestObjects  [_playerObject, [_x], _searchRadius];
 			if ((count _objects) >= 1) then {
 
 				_nObjects append _objects;
