@@ -9,11 +9,12 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_vehicleClass","_pinCode","_playerObject","_salesPrice","_playerMoney","_position","_vehicleObject","_logging","_traderLog","_responseCode","_spawnObjects","_disableRadius", "_dirAir", "_dirOther", "_searchRadius", "_errorMessage", "_nObjects", "_lenSpawnObjects", "_findEmpty"];
-_sessionID = _this select 0;
-_parameters = _this select 1;
+private["_sessionID","_parameters","_vehicleClass","_pinCode","_playerObject","_salesPrice","_playerMoney","_position","_vehicleObject","_logging","_traderLog","_responseCode","_spawnObjects","_disableRadius", "_dirAir", "_dirOther", "_searchRadius", "_errorMessage", "_nObjects", "_lenSpawnObjects", "_findEmpty", "_throwError"];
+_sessionID    = _this select 0;
+_parameters   = _this select 1;
 _vehicleClass = _parameters select 0;
-_pinCode = _parameters select 1;
+_pinCode      = _parameters select 1;
+_throwError   = 0;
 try 
 {
 	_playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
