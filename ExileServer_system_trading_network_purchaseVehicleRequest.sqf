@@ -10,11 +10,11 @@
  */
  
 private["_sessionID","_parameters","_vehicleClass","_pinCode","_playerObject","_salesPrice","_playerMoney","_position","_vehicleObject","_logging","_traderLog","_responseCode","_spawnObjects","_disableRadius", "_dirAir", "_dirOther", "_searchRadius", "_errorMessage", "_nObjects", "_lenSpawnObjects", "_findEmpty", "_throwError"];
-_sessionID    = _this select 0;
-_parameters   = _this select 1;
-_vehicleClass = _parameters select 0;
-_pinCode      = _parameters select 1;
-_throwError   = 0;
+_sessionID      = _this select 0;
+_parameters     = _this select 1;
+_vehicleClass   = _parameters select 0;
+_pinCode 		= _parameters select 1;
+_throwError     = 0;
 try 
 {
 	_playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
@@ -74,18 +74,21 @@ try
 			"Land_JumpTarget_F"
 		]; 		
 
-		_safeRadius     = 5;                   // radius around the spawn object where it looks for room, must be 5 or higher
-		_disableRadius  = 0;                   // set to 1 if you want vehicles to only spawn at the exact coords of your spawn object, not recommended better to reduce _safeRadius
-		_dirAir         = 30.180;              // set rotation of air vehicle spawning, default = random
-		_dirOther       = (random 360);        // set rotation of all other vehicles spawning, default = random
-		_searchRadius	= 110;                 // set the radius to search for _spawnObjects based on the players current location
+		_safeRadius     = 5; 							// radius around the spawn object where it looks for room, must be 5 or higher
+		_disableRadius  = 0; 							// set to 1 if you want vehicles to only spawn at the exact coords of your spawn object, not recommended better to reduce _safeRadius
+		_dirAir         = 30.180;       				// set rotation of air vehicle spawning, default = random
+		_dirOther       = (random 360); 				// set rotation of all other vehicles spawning, default = random
+		_searchRadius	= 110;							// set the radius to search for _spawnObjects based on the players current location
 		
 		// (toast)message to player when there is no room to spawn at any of the available locations
 		_errorMessage   = "There is no room to safely spawn this vehicle, ask a player to move their vehicle!"; 
+	
+		// _nObject		= nearestObject [(getPosATL _playerObject), _spawnObject];
+		_nObjects 		= [];
 
-		// If you want to ignore a specific spawn object then add something like this for a specific vehicle type
-		// if (_vehicleClass isKindOf "Air") then { _spawnObjects deleteAt 0; };
-		
+		// remove the VR circle if vehicle type is 'Air'
+		if (_vehicleClass isKindOf "Air") then { _spawnObjects deleteAt 0; };
+
 		// find a type of nearest object from the list of objects available...
 		{
 			_objects = nearestObjects  [_playerObject, [_x], _searchRadius];
